@@ -1,0 +1,29 @@
+name: Stadt und Land Hamburg
+slug: hamburg
+tagline: "Offener Haushalt Hamburg"
+source: Stadt Hamburg
+source_url: http://www.hamburg.de/fb/haushaltplaene/
+data_url: http://suche.transparenz.hamburg.de/dataset/der-doppelhaushalt-2015-2016
+state: HH
+level: land
+dataset: hamburg-2012-ist
+default: einzelplan
+
+filters:
+  - field: 'jahr'
+    name: 'Jahr'
+    default: 2012
+  - field: 'soll_ist'
+    name: 'Planzahl'
+    default: 'Ist'
+  - field: 'e_a'
+    name: 'E/A'
+    default: 'A'
+
+hierarchies:
+    einzelplan:
+        name: Einzelpläne
+        drilldowns:
+            - einzelplan
+            - aufgabenbereich
+            - produktgruppe
